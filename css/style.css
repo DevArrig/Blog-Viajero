@@ -1,0 +1,228 @@
+/*=======================================================================================================
+Puntos de resolución más generales
+
+1366 px -> Escritorio PC o Portátil
+1024 px -> Tablet Horizontal
+ 768 px -> Tablet Vertical
+ 576 px -> Móvil Horizontal
+ 320 px -> Móvil Vertical
+
+=======================================================================================================*/
+
+
+
+/*=============================================
+ESCRITORIO (XL revisamos en 1366 en adelante) 
+=============================================*/
+*{
+	font-family: 'Open sans', sans-serif;
+}
+
+ul, ol{
+	list-style:none;
+}
+
+a:visited,a:link, a:focus, a:hover, a:active{
+	list-style: none;
+	text-decoration: none;
+}
+
+
+/*=============================================
+HEADER
+=============================================*/
+
+header {
+
+	/* fija el banner y lo pone bajo la transparencia de la cabezar al deslizar hacia abajo */
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	/* ------------------------------------- */
+	background: rgba(0,0,0,.5);
+
+
+}
+	
+	.fade-slider{
+		height: 250px;
+	}
+
+
+header .logotipo{
+	width: 40%;
+}
+
+header .redes ul li i{
+
+	width: 35px;
+	line-height: 35px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.redes ul li a i.fa-facebook{
+}
+
+
+.fa-bars {
+	font-size: 35px;
+}
+
+.fa-magnifying-glass .fa-bars{
+	color: white;
+}
+
+.redesMoviles{
+	position: fixed;
+	bottom: 0px;
+	left: 50%;
+	transform: translateY(-50px,0%);
+}
+
+/*=============================================
+BANNER
+=============================================*/
+.fade-slider {
+
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+
+.bannerEstatico{
+	background-color:rgba(0,0,0,0);
+	height: 200px;
+}
+
+/*=============================================
+MENÚ
+=============================================*/
+
+.menu{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background:rgba(0, 0, 0, 0.8) ;
+	overflow-x: hidden;
+	font-weight: 300;
+	display: none;
+	font-size: 34px;
+	line-height: 70px;
+}
+
+.btn-close{
+
+	position: absolute;
+	top: 100px;
+	right: 25%;
+	color: white;
+
+}
+
+.menu .nav{
+
+	margin-top: 10%;
+}
+
+/*=============================================
+GRID DE CATEGORÍAS (Large revisamos en 1024px)
+=============================================*/
+
+.grid figure{
+
+	border-top: 0px;
+	border-bottom: 0px;
+	border-left: 8px solid white;
+	border-right: 8px solid white;
+
+
+}
+
+/*=============================================
+TABLET HORIZONTAL (Large revisamos en 1024px)
+=============================================*/
+@media (max-width:1199px) and (min-width:992px){
+
+	.menu .nav{
+		margin-top: 15%;
+	}
+
+}
+
+/*=============================================
+TABLET VERTICAL (Medium revisamos en 768px)
+=============================================*/
+@media (max-width:991px) and (min-width:768px){
+
+	header .logotipo{
+		width: 55%;
+	}
+
+	.btn-close{
+		top:70px;
+	}
+
+	.menu .nav{
+		margin-top: 20%;
+	}
+
+}
+
+/*=============================================
+MOVIL HORIZONTAL (Small revisamos en 576px)
+=============================================*/
+@media (max-width:767px) and (min-width:576px){
+
+	header .logotipo{
+	width: 65%;
+	}
+	
+	.fade-slider{
+		height: 70px;
+	}
+
+	.btn-close{
+		left:1%;
+		top:50px;
+	}
+	
+	.menu .nav{
+		margin-top: 25%;
+	}
+}
+	
+
+/*=============================================
+MOVIL VERTICAL (Revisamos en 320px)
+=============================================*/
+@media (max-width:575px) {
+
+	header .logotipo{
+	width: 100%;
+}	
+	
+	.fade-slider{
+		height: 54px;
+
+	}
+
+	.btn-close{
+		left:10%;
+		top:20px;
+	}
+	
+	.menu .nav{
+		margin-top: 25%;
+		font-size: 20px;
+		line-height: 40px;
+	}
+
+
+
+}
